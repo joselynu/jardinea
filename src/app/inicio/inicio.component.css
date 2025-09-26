@@ -1,0 +1,86 @@
+
+.contenido-principal { background-color: #f1e3bb; padding: 2rem; }
+
+.contenidos-destacados { background-color: #d8c07d; padding: 2rem; height: 10px; }
+
+.titulo-centro { text-align: center; }
+
+.nav-t {
+  color: white;
+  position: relative;
+  text-decoration-color: beige;
+  transition: color 0.3s ease;
+}
+.nav-t::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-t:hover::after {
+  width: 80%;
+}
+
+
+.producto-destacado {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255,255,255,0.92);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 620px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  /* IMPORTANTE: nada de position:absolute aquí */
+}
+
+/* Deja al carrusel controlar la visibilidad de los items */
+.carousel-item { 
+  min-height: 200px;         /* solo alto mínimo, sin display flex */
+  padding: 16px 0;           /* espacio vertical opcional */
+}
+
+/* Tamaño de las imágenes dentro de la tarjeta */
+.producto-destacado .imagen img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Alto de la portada (ajústalo a gusto) */
+.home-hero { --hero-h: 65vh; }                 /* 65% del alto de la pantalla */
+.home-hero-img {
+  height: var(--hero-h);
+  object-fit: cover;                           /* que no se deforme */
+  object-position: center;                     /* centrada */
+}
+
+/* Que la imagen realmente llegue a ambos bordes del viewport, 
+   incluso si hay contenedores padres con márgenes */
+
+
+/* Un poco más alta en pantallas grandes */
+@media (min-width: 992px) {
+  .home-hero { --hero-h: 72vh; }
+}
+
+/* BANDA NEGRA que llega a los bordes del viewport */
+.home-hero-band {
+  background: #000;             /* mismo negro del navbar */
+  /* full-bleed: rompe márgenes para tocar las esquinas izq/der */
+  margin-left:  calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+#homeCarousel { --bs-carousel-control-color: #000; }
+#homeCarousel .carousel-control-prev-icon,
+#homeCarousel .carousel-control-next-icon { background-color: rgba(255,255,255,0.9); }
+

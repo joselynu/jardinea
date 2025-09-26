@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import {Usuario} from './interfaces/usuario';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   constructor (public router: Router) {}
+ 
 
   esInicio(): boolean {
     return this.router.url === '/';

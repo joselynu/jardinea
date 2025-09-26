@@ -1,14 +1,119 @@
-<div class="contenido-fondo"> 
-<br><br><br><br><br>
-</div>
-<p>aaa</p>
+<!--<div class="contenido-fondo mt-1 pt-1"> 
+  <div class="contenidos-destacados">
+    <div class="contenido-principal text-center">
+      <h1 class="titulo-centro">Productos Destacados</h1>
+    </div>
+  -->
 <!--
-<div class="contenido-principal">
-  <h1 class="titulo-centro">Productos Destacados</h1>
-  <div class="container mt-5 pt-5">
-    <router-outlet></router-outlet>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+
+        <div class="carousel-item active" data-bs-interval="5000">
+          <div class="producto-destacado">
+            <div class="descripcion">
+              <h2>Bolsa de Cuarzo Nuez</h2>
+              <p>Ideal para jardines. Bolsa de 1.5 kg a solo $3.500</p>
+              <button class="btn btn-primary">¡¡Quiero saber más!!</button>
+            </div>
+            <div class="imagen">
+              <img src="assets/img/producto111.jpg" alt="cuarzo">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <div class="producto-destacado">
+            <div class="descripcion">
+              <h2>Pasto en Rollos</h2>
+              <p>Rollo de pasto natural/sintético. Cada uno equivale a 1m² por $5.000.</p>
+              <button class="btn btn-primary">¡¡Quiero saber más!!</button>
+            </div>
+            <div class="imagen">
+              <img src="assets/img/producto22.jpg" alt="pasto">
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="5000">
+          <div class="producto-destacado">
+            <div class="descripcion">
+              <h2>Corta Césped</h2>
+              <p>Herramientas mecánicas y manuales para jardín a un precio fabuloso.</p>
+              <button class="btn btn-primary">¡¡Quiero saber más!!</button>
+            </div>
+            <div class="imagen">
+              <img src="assets/img/productos333.jpg" alt="corta césped">
+            </div>
+          </div>
+        </div>
+-->
+
+
+<div #homeCarousel id="homeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+  <!-- Indicadores -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
   </div>
 
-</div>
-  -->
+  <!-- Slides -->
+  <div class="carousel-inner">
 
+    <div class="carousel-item active">
+      <div class="producto-destacado">
+        <div class="descripcion">
+          <h2>Bolsa de Cuarzo Nuez</h2>
+          <p>Ideal para jardines. Bolsa de 1.5 kg a solo $3.500</p>
+          <button class="btn btn-primary">¡¡Quiero saber más!!</button>
+        </div>
+        <div class="imagen">
+          <img src="assets/img/producto111.jpg" alt="cuarzo">
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="producto-destacado">
+        <div class="descripcion">
+          <h2>Corta Césped</h2>
+          <p>Herramienta para tu jardín, manual o mecánica, a un precio fabuloso.</p>
+          <button class="btn btn-primary">¡¡Quiero saber más!!</button>
+        </div>
+        <div class="imagen">
+          <img src="assets/img/productos333.jpg" alt="corta césped">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visualmente-hidden">Siguiente</span>
+  </button>
+</div>
+
+<br><br><br><br>
+
+<section class="home-hero mb-4">
+  <!-- imagen a todo el ancho real de la ventana -->
+  <div class="container-fluid px-0 home-hero-bleed">
+    <img src="assets/img/ooo.jpg" alt="Portada de MUA Jardinería" class="home-hero-img d-block w-100" loading="lazy"/>
+    <div class="home-hero-overlay"></div>
+  </div>
+
+  <!-- descripción centrada debajo -->
+  <div class="home-hero-desc text-center mt-3">
+    <h1 class="h3 text-center mb-2">¡Bienvenido a MUA Jardinería!</h1>
+    <p class="lead text-center text-muted mb-0">
+      Semillas, flores, decoración y herramientas para tu jardín. Calidad y envío rápido.
+    </p>
+  </div>
+</section>

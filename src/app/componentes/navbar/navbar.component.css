@@ -6,3 +6,30 @@
 .boton-3d1 {
     color: white;
 }    
+
+.social-stack{
+  position: fixed;
+  top: calc(var(--nav-h) + 8px); /* justo debajo del navbar */
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1100; /* por encima del contenido */
+}
+
+.social-fab{
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #000; color: #fff;       /* negro como tu navbar */
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  opacity: .95;
+  transition: transform .15s, opacity .15s, background .2s;
+}
+.social-fab:hover{ transform: translateY(-2px); opacity: 1; }
+
+.social-fab.ig:hover{
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 55%, #d6249f 75%, #285AEB 100%);
+}
+.social-fab.fb:hover{ background: #1877f2; }

@@ -84,3 +84,65 @@
 #homeCarousel .carousel-control-prev-icon,
 #homeCarousel .carousel-control-next-icon { background-color: rgba(255,255,255,0.9); }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////*
+/* ===== Portada (Hero) ===== */
+:root {
+  --hero-h: 65vh;       /* altura de la imagen (ajusta a gusto) */
+  --hero-border: 3px;   /* grosor del borde negro */
+}
+
+
+@media (min-width: 992px) {
+  :root { --hero-h: 172vh; }
+}
+
+/* Tarjeta que envuelve imagen + descripción*/
+.home-hero-card {
+  border: var(--hero-border) solid #000;     /*borde negro*/
+  border-radius: 18px;
+  overflow: hidden;                       
+  background: #000;                     
+  box-shadow: 0 12px 28px rgba(0,0,0,.25);
+}
+
+
+/* Hacer que la “carta” negra sea full-bleed (toque las esquinas) */
+.home-hero-card--full{
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;            /* ocupa todo el ancho de la ventana */
+  border-radius: 0;        /* sin esquinas redondeadas para tocar bordes */
+  box-shadow: none;        /* quita sombra si no quieres borde gris en lados */
+}
+
+@media (min-width: 992px){
+  .home-hero-card--full{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+/* Contenedor de la imagen */
+.home-hero-wrap {
+  position: relative;
+}
+
+
+/* Capa oscura sobre la imagen (para contraste) */
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.35);  /* sube/baja opacidad si quieres */
+  pointer-events: none;
+}
+
+/* Descripción */
+.home-hero-desc {
+  color: #fff;
+  padding: 20px 18px 24px;
+  text-align: center;
+}
+
+.home-hero-desc h1,
+.home-hero-desc p { color: #fff; }

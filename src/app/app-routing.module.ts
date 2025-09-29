@@ -6,6 +6,10 @@ import { ListProductsComponent } from './componentes/listproducts/list-products.
 import { AddEditProductComponent } from './componentes/add-edit-product/add-edit-product.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { MiusuarioComponent } from './componentes/miusuario/miusuario.component';
+import { ControlplagasComponent } from './componentes/controlplagas/controlplagas.component';
+import { HerrjardineriaComponent } from './componentes/herrjardineria/herrjardineria.component';
+import { ArtdecorativosComponent } from './componentes/artdecorativos/artdecorativos.component';
+import { PlantasComponent } from './componentes/plantas/plantas.component';
 
 
 const routes: Routes = [
@@ -17,6 +21,10 @@ const routes: Routes = [
   { path: 'add', component: AddEditProductComponent },
   { path: 'crearusuario', component: UsuarioComponent},
   { path: 'verusuario', component: MiusuarioComponent},
+  {path:  'plantas', component: PlantasComponent},
+  {path: 'controlplagas',component: ControlplagasComponent},
+   {path: 'herrjardineria',component: HerrjardineriaComponent},
+   {path: 'artdecorativos', component: ArtdecorativosComponent},
   { path: '**', redirectTo: '' , pathMatch: 'full' },
   
   // 

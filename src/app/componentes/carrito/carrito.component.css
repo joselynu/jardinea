@@ -1,0 +1,17 @@
+.cart-row{
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.cart-row:last-child{ border-bottom: 0; }
+.cart-row img{
+  width: 80px; height: 80px; object-fit: contain; background: #f7f7f7; border-radius: 8px;
+}
+.cart-row .qty{
+  display: grid; grid-template-columns: auto 64px auto; gap: 6px; align-items: center;
+}
+.price{ min-width: 140px; }
+.flex-1{ flex: 1 1 auto; }

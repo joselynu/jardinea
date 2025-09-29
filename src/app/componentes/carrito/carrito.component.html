@@ -1,0 +1,59 @@
+<section class="container my-4">
+  <div class="row g-4">
+    <div class="col-lg-8">
+      <div class="card p-3 shadow-sm">
+        <h5 class="mb-3">Carro</h5>
+
+        <ng-container *ngIf="(items$ | async) as items; else empty">
+          <div *ngFor="let it of items; trackBy: trackById" class="cart-row">
+            <img [src]="it.product.imagen" [alt]="it.product.nombre">
+            <div class="flex-1">
+              <div class="fw-semibold">{{ it.product.nombre }}</div>
+              <div class="text-muted small">{{ it.product.marca }}</div>
+              <button class="btn btn-link text-danger p-0 small"
+                      (click)="cart.remove(it.product.id)">Eliminar</button>
+            </div>
+
+            <div class="qty">
+              <button class="btn btn-outline-secondary btn-sm"
+                      (click)="cart.decrease(it.product.id)">−</button>
+              <input class="form-control form-control-sm text-center" type="number"
+                     [value]="it.qty"
+                     (change)="cart.setQty(it.product.id, $any($event.target).valueAsNumber)">
+              <button class="btn btn-outline-secondary btn-sm"
+                      (click)="cart.increase(it.product.id)">+</button>
+            </div>
+
+            <div class="price text-end">
+              <div class="fw-bold">
+                {{ (it.product.precio * it.qty) | currency:'CLP':'symbol-narrow':'1.0-0' }}
+              </div>
+              <div class="text-muted small">
+                {{ it.product.precio | currency:'CLP':'symbol-narrow':'1.0-0' }} c/u
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <ng-template #empty>
+          <div class="text-center text-muted py-5">Tu carrito está vacío.</div>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card p-3 shadow-sm sticky-top" style="top: 90px">
+        <h6 class="mb-3">Resumen</h6>
+        <div class="d-flex justify-content-between mb-2">
+          <span>Subtotal</span>
+          <strong>{{ cart.subtotal | currency:'CLP':'symbol-narrow':'1.0-0' }}</strong>
+        </div>
+        <hr class="my-2">
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary">Continuar compra</button>
+          <button class="btn btn-outline-danger" (click)="cart.clear()">Vaciar carrito</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

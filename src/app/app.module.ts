@@ -10,6 +10,11 @@ import { AddEditProductComponent } from './componentes/add-edit-product/add-edit
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { MiusuarioComponent } from './componentes/miusuario/miusuario.component';
+import { PlantasComponent } from './componentes/plantas/plantas.component';
+import { ControlplagasComponent } from './componentes/controlplagas/controlplagas.component';
+import { HerrjardineriaComponent } from './componentes/herrjardineria/herrjardineria.component';
+import { ArtdecorativosComponent } from './componentes/artdecorativos/artdecorativos.component';
+import { CarritoComponent } from './componentes/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { MiusuarioComponent } from './componentes/miusuario/miusuario.component'
     AddEditProductComponent,
     NavbarComponent,
     UsuarioComponent,
-    MiusuarioComponent
+    MiusuarioComponent,
+    PlantasComponent,
+    ControlplagasComponent,
+    HerrjardineriaComponent,
+    ArtdecorativosComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
